@@ -3,10 +3,12 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { MetricsComponent } from './metrics/metrics.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MetricsComponent
   ],
   imports: [
     BrowserModule,
