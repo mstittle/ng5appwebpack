@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Metric} from '../metric';
 
 @Component({
   selector: 'app-metrics',
@@ -8,8 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MetricsComponent implements OnInit {
 
  @Input()
- value : number;
-  
+ value : Metric;
+
   constructor() { }
 
   ngOnInit() {

@@ -2,4 +2,6 @@
   {{title}}
 </h1>
 
-<app-metrics></app-metrics>
+<ul *ngFor="let value of values" >
+  <app-metrics [value] = value></app-metrics>
+</ul>

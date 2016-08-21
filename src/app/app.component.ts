@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MetricsService} from './metrics.service';
+import {Metric} from "./metric";
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -8,13 +9,17 @@ import { MetricsService} from './metrics.service';
 })
 export class AppComponent {
 
+  values: Metric[];
+
   constructor(private service : MetricsService) {
-    
+
   }
 
    ngOnInit(): void  {
-      this.service.getData().then( values => values.forEach( x => console.log(x)));
+      this.service.getData().then(
+        values => this.values = values
+      );
    }
-   
+
   title = 'app works!';
 }
